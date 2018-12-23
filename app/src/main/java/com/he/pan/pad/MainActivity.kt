@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-   private val dialog: SelectAppDialog by lazy {
+    private val dialog: SelectAppDialog by lazy {
         SelectAppDialog.newInstance()
     }
 
@@ -24,16 +24,20 @@ class MainActivity : AppCompatActivity() {
 
         initVebView()
         button.setOnClickListener {
-            dialog.show(supportFragmentManager,"")
+            dialog.show(supportFragmentManager, "")
         }
         button.setOnLongClickListener {
             goSystemLauncher()
             return@setOnLongClickListener true
         }
+        refresh.setOnRefreshListener {
+            initVebView()
+        }
     }
 
     private fun initVebView() {
 
+        refresh.isRefreshing = false
         var set = webView.settings.apply {
             //            setSupportZoom(true)
 //            builtInZoomControls = true
@@ -74,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 //            println(it.activityInfo.packageName+"  "+it.activityInfo.name)
 //        }
 
-        var compant = ComponentName("com.android.launcher3","com.android.launcher3.Launcher")
+        var compant = ComponentName("com.android.launcher3", "com.android.launcher3.Launcher")
         var myintent = Intent().apply {
             component = compant
         }
