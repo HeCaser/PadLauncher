@@ -1,7 +1,7 @@
 <resources>
     <dimen name="fl_size">60dp</dimen>
     <dimen name="fl_right_margin">30dp</dimen>
-    <dimen name="fl_bottom_margin">340dp</dimen>
+    <dimen name="fl_bottom_margin">140dp</dimen>
     <dimen name="dialog_height">260dp</dimen>
     <dimen name="app_icon_heigh">70dp</dimen>
 </resources>

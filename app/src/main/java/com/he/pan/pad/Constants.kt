@@ -6,3 +6,4 @@ package com.he.pan.pad
  */
 
 const val LINE_APP_NUMBER = 6
+const val COMPANY_NAME = "济康智学辅助训练"

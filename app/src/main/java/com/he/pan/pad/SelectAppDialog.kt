@@ -18,7 +18,8 @@ import me.drakeet.multitype.MultiTypeAdapter
 class SelectAppDialog : DialogFragment() {
 
     companion object {
-        var nameList = mutableListOf("注意力训练","注意力100","最强大脑记忆","节拍器","舒尔特表","舒尔特方格")
+        var nameList = mutableListOf("注意力训练","注意力100","最强大脑记忆",
+            "节拍器","舒尔特表","舒尔特方格","Speed Reading")
         fun newInstance(): SelectAppDialog {
             return SelectAppDialog().apply {
 

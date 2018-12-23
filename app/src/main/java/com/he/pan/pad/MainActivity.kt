@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity() {
 //            loadWithOverviewMode = true
             //响应点击
             javaScriptEnabled = true
+
+            // 解决字体变大导致失真
+            textZoom = 100
 //            javaScriptCanOpenWindowsAutomatically = true
         }
 
